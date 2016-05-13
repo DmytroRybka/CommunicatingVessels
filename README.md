@@ -12,7 +12,11 @@ Please see short demonstration video:
 https://www.dropbox.com/s/z8ckdhe43xi6tos/communicating%20vessels%20demo.mp4?dl=0
 Please view with an external player ( dropbox viewer quality is low). 
  
- 
+Binaries
+-----------
+Binaries are available here:
+https://www.dropbox.com/sh/05l7p4r9ijnwfwh/AADqWawgoxY8PV_6-fQ1G8O4a?dl=0
+
  
 Core service
 --------------
