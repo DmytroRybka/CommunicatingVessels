@@ -10,6 +10,8 @@ Demo
 -----------------
 Please see short demonstration video:
 https://www.dropbox.com/s/z8ckdhe43xi6tos/communicating%20vessels%20demo.mp4?dl=0
+Please view with an external player ( dropbox viewer quality is low). 
+ 
  
  
 Core service
