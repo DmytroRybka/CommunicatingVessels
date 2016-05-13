@@ -9,6 +9,7 @@ It is a sample, deployable Maven 3 project to help you get your foot in the door
 Demo 
 -----------------
 Please see short demonstration video:
+https://www.dropbox.com/s/z8ckdhe43xi6tos/communicating%20vessels%20demo.mp4?dl=0
  
  
 Core service
