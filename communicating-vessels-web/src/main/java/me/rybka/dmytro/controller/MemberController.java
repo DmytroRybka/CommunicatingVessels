@@ -1,19 +1,15 @@
 package me.rybka.dmytro.controller;
 
-import java.util.logging.Logger;
+import me.rybka.dmytro.model.Member;
+import me.rybka.dmytro.service.MemberRegistration;
 
 import javax.annotation.PostConstruct;
-import javax.enterprise.event.Event;
 import javax.enterprise.inject.Model;
 import javax.enterprise.inject.Produces;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import javax.inject.Named;
-import javax.persistence.EntityManager;
-
-import me.rybka.dmytro.model.Member;
-import me.rybka.dmytro.service.MemberRegistration;
 
 // The @Model stereotype is a convenience mechanism to make this a request-scoped bean that has an
 // EL name
