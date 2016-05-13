@@ -10,6 +10,10 @@ Demo
 -----------------
 Please see short demonstration video:
  
+ 
+Core service
+--------------
+Core service is available under: CommunicatingVessels\communicating-vessels-ejb\src\main\java\me\rybka\dmytro\service\CommunicatingVesselsServiceImpl.java
 
 
 This project is setup to allow you to create a compliant Java EE 6 application using JSF 2.0, CDI 1.0, EJB 3.1, JPA 2.0 and Bean Validation 1.0. It includes a persistence unit and some sample persistence and transaction code to introduce you to database access in enterprise Java. 
