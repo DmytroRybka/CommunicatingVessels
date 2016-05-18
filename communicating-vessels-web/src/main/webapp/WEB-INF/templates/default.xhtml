@@ -11,8 +11,10 @@
 </h:head>
 <h:body>
     <div id="container">
-        <div class="dualbrand">
-            <img src="resources/gfx/dualbrand_logo.png" alt="Logo"/>
+        <div id="wrapperHeader">
+            <div id="top-header">
+                <h1 id="logo"> Communicating Vessel project </h1>
+            </div>
         </div>
         <div id="content">
             <ui:insert name="content">
@@ -20,7 +22,7 @@
             </ui:insert>
         </div>
         <div id="aside">
-            <p:chart type="bar" model="#{chartView.barModel}" style="height:300px"/>
+            <p:chart type="bar" model="#{chartView.barModel}" style="height:350px"/>
         </div>
         <div id="footer">
             <p:chart type="bar" model="#{chartView.horizontalBarModel}" style="height:300px"/>

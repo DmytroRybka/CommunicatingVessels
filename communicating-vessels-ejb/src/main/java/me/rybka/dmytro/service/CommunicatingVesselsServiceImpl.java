@@ -6,11 +6,13 @@ import java.util.Stack;
 import java.util.logging.Logger;
 
 @Stateless
+/**
+ * Main service responsible for calculating capacity of water inside array.
+ * Implements {@link CommunicatingVesselsService }
+ */
 public class CommunicatingVesselsServiceImpl implements CommunicatingVesselsService {
 
-    @Inject
-    private Logger log;
-
+    @Override
     public int calculateCapacity(int[] vesselArray) {
         int i = 0;
         int capacity = 0;
@@ -40,7 +42,6 @@ public class CommunicatingVesselsServiceImpl implements CommunicatingVesselsServ
             }
         }
         capacity = calculateLastVessel(capacity, borderLast, stack);
-        log.info("Capacity: " + capacity);
         return capacity;
     }
 
@@ -53,12 +54,13 @@ public class CommunicatingVesselsServiceImpl implements CommunicatingVesselsServ
      * @return calculated capacity
      */
     private int calculateLastVessel(int capacity, int last, Stack<Integer> stack) {
+        int lastElement = last;
         while (!stack.isEmpty()) {
             int temp = stack.pop();
-            if (temp >= last)
-                last = temp;
+            if (temp >= lastElement)
+                lastElement = temp;
             else {
-                capacity = capacity + last - temp;
+                capacity = capacity + lastElement - temp;
             }
         }
         return capacity;
@@ -73,10 +75,11 @@ public class CommunicatingVesselsServiceImpl implements CommunicatingVesselsServ
      * @return calculated capacity
      */
     private int calculateNextVessel(int capacity, int max, Stack<Integer> stack) {
+        int resultedCapacity = capacity;
         while (!stack.isEmpty()) {
-            capacity = capacity + max - stack.pop();
+            resultedCapacity = resultedCapacity + max - stack.pop();
         }
-        return capacity;
+        return resultedCapacity;
     }
 
 }

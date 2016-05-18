@@ -1,6 +1,6 @@
 package me.rybka.dmytro.rest;
 
-import java.util.List;
+import me.rybka.dmytro.model.Member;
 
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
@@ -9,8 +9,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
-
-import me.rybka.dmytro.model.Member;
+import java.util.List;
 
 /**
  * JAX-RS Example
@@ -25,16 +24,15 @@ public class MemberResourceRESTService {
 
    @GET
    @Produces("text/xml")
+   @SuppressWarnings("unchecked")
    public List<Member> listAllMembers() {
       // Use @SupressWarnings to force IDE to ignore warnings about "genericizing" the results of
       // this query
-      @SuppressWarnings("unchecked")
       // We recommend centralizing inline queries such as this one into @NamedQuery annotations on
       // the @Entity class
       // as described in the named query blueprint:
       // https://blueprints.dev.java.net/bpcatalog/ee5/persistence/namedquery.html
-      final List<Member> results = em.createQuery("select m from Member m order by m.name").getResultList();
-      return results;
+      return em.createQuery("select m from Member m order by m.name").getResultList();
    }
 
    @GET

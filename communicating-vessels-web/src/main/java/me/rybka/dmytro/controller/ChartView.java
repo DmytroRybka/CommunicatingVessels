@@ -13,7 +13,7 @@ import java.util.Random;
 public class ChartView implements Serializable {
 
     public static final int MAX_VOLUME = 100;
-    public static final int MIN_VOLUME = 1;
+    public static final int MIN_VOLUME = 0;
     public static final String COMMUNICATING_VESSELS_TITLE = "Communicating Vessels";
     public static final String BLOCK_HEIGHT_LABEL = "Block height";
     public static final String BLOCKS_WIDTH_LABEL = "Blocks width";
@@ -30,7 +30,7 @@ public class ChartView implements Serializable {
     private BarChartModel barModel;
     private HorizontalBarChartModel horizontalBarModel;
 
-    private int blocksArray[] = generateArray();
+    private final int[] blocksArray = generateArray();
 
     @PostConstruct
     public void init() {
@@ -116,6 +116,8 @@ public class ChartView implements Serializable {
         Axis xAxis = horizontalBarModel.getAxis(AxisType.X);
         xAxis.setMin(MIN_VOLUME);
         xAxis.setMax(MAX_VOLUME);
+        xAxis.setTickInterval("10");
+        xAxis.setTickAngle(50);
 
         Axis yAxis = horizontalBarModel.getAxis(AxisType.Y);
         yAxis.setLabel(WATER_VOLUME_LABEL);
@@ -135,6 +137,7 @@ public class ChartView implements Serializable {
 
         Axis yAxis = barModel.getAxis(AxisType.X);
         yAxis.setLabel(BLOCKS_WIDTH_LABEL);
+        yAxis.setTickInterval("1");
 
         yAxis.setMin(MIN_UNIT);
         yAxis.setMax(MAX_UNIT);

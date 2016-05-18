@@ -8,7 +8,10 @@ import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import java.util.logging.Logger;
 
-// The @Stateless annotation eliminates the need for manual transaction demarcation
+/**
+ * Logic for member registration.
+ *
+ */
 @Stateless
 public class MemberRegistration {
 
@@ -21,7 +24,7 @@ public class MemberRegistration {
    @Inject
    private Event<Member> memberEventSrc;
 
-   public void register(Member member) throws Exception {
+   public void register(Member member) {
       log.info("Registering " + member.getName());
       em.persist(member);
       memberEventSrc.fire(member);

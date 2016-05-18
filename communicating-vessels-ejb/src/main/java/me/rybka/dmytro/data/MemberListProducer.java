@@ -15,6 +15,9 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
+/**
+ * TODO:// [DR] Planned to be used for the history functionality.
+ */
 @RequestScoped
 public class MemberListProducer {
    @Inject
