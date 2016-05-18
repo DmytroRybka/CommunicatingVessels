@@ -98,6 +98,10 @@ _NOTE: The following commands assume you have configured your Maven user setting
         mvn clean test -Parq-jbossas-remote 
 
 
+Test Coverage Summary
+----------------------
+![ScreenShot](https://www.dropbox.com/s/0s9abpr02bfosav/coverage%20summary.jpg?dl=0)
+
 Investigate the Console Output
 ---------------------
 You should see the following console output when you run the tests:
