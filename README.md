@@ -100,7 +100,7 @@ _NOTE: The following commands assume you have configured your Maven user setting
 
 Test Coverage Summary
 ----------------------
-![ScreenShot](https://www.dropbox.com/s/0s9abpr02bfosav/coverage%20summary.jpg?dl=0)
+![ScreenShot](http://screencast.com/t/wtyGnfF2)
 
 Investigate the Console Output
 ---------------------
